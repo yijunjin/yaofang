@@ -369,7 +369,7 @@ function animate(ele,opt,callback){
 
 				// 设置样式
 				ele.style[attr] = current + unit;
-			},30);
+			},80);
 
 		})(attr);
 	}

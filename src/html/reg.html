@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_76q5i58am4s/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_kb6vgltwku/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_7e7j7cv4gf/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../css/reg.css" />
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/reg.js"></script>
+    </head>
+    <body>
+                <!-- 顶部top -->
+        <div id="top">
+            <div class="container">
+                <ul class="left fl">
+                    <li class="fl wxcj"><i class="iconfont icon-erweima"></i><a href="#">微信查价</a><s></s>
+                    <div class="wxbig">
+                        <div class="pic"></div>
+                        <div class="txt">微信扫描二维码，查药比价更方便！</div>
+                    </div></li>
+                    <li class="fl app"><i class="iconfont icon-shouji"></i><a href="#">手机APP</a><s></s>
+                    <div class="appbig"><div class="pic"></div><div class="txt">药房网商城App，注册就送20元</div></div>
+                    </li>
+                </ul>
+                <ul class="right">
+
+                    <li class="wzdh">
+                        <a href="#">网站导航</a>
+                        <i class='iconfont icon-arrow-down'></i>
+                        <div class="other">
+                            <div class="item">
+                                <div class="h1">健康咨询</div>
+                                <a href="#">医药资讯</a>
+                                <a href="#">疾病知识</a>
+                                <a href="#">用药指导</a>
+                                <a href="#">健康问答</a>
+                                <a href="#">疾病症状库</a>
+                            </div>
+                            <div class="item">
+                                <div class="h1">特色服务</div>
+                                <a href="#">健康专题</a>
+                                <a href="#">健康百科</a>
+                                <a href="#">医院大全</a>
+                                <a href="#">药房联盟</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="kfzx">
+                        <a href="#">客服中心</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <!-- header -->
+        <div id="header">
+            <div class="container">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="../img/logo.jpg" />
+                    </a>
+                </div>
+                <div class="sub"><span class="sub_name">用户注册</span></div>
+
+            </div>
+        </div>
+        <!-- 主要 -->
+       
+        <div id="regmain">
+            <div class="register">
+                <div class="container clearfix">
+                    <div class="form">
+                        <div class="tabnav clearfix">
+                            <ul class="navul">
+                                <li class="first"><a href="#" class="active">个人用户</a></li>
+                                <li><a href="#">商家入驻</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="items">
+                            <ul class="iform">
+                                <li class="line">
+                                    <label>注册信息（必填项）</label>
+                                </li>
+                                <li>
+                                    <span class="note"><label for="username"><span>*</span>用户名：</label></span>
+                                    <span class="bginput"><i class="iconfont icon-yonghuming"></i><input type="text" id="username" class="input_big" placeholder="2-18个字符，且不能为特殊符号和空格"></span>
+                                    <span class="err"><i></i></span>
+                                </li>
+                                <li>
+                                    <span class="note"><label for="password"><span>*</span>登录密码：</label></span>
+                                    <span class="bginput"><i class="iconfont icon-mima"></i><input type="password" id="password" class="input_big" placeholder="6-20位数字和字符组合，两边不能有空符号"></span>
+                                    <span class="err"><i class="iconfont icon-henggang"></i>  密码不对</span>
+                                </li>
+                                <li>
+                                    <span class="note"><label for="cpsd"><span>*</span>确认密码：</label></span>
+                                    <span class="bginput"><i class="iconfont icon-mima"></i><input type="password" id="cpsd" class="input_big" placeholder="请输入您的确认密码"></span>
+                                    <span class="err"><i></i></span>
+                                </li>
+                                <li>
+                                    <span class="note"><label><span>*</span>手机号码：</label></span>
+                                    <span class="bginput"><input type="text" id="phone" class="input_big s" placeholder="请输入您的手机号码，11位数字"></span>
+                                    <span class="err"><i></i></span>
+                                </li>
+                                <li>
+                                    <span class="note"><label><span>*</span>手机验证码：</label></span>
+                                    <span class="bginput"><input type="text" id="phoneCode" class="input_big s" placeholder="请输入6位手机验证码"></span>
+                                    <span class="bginput"><a href="#" class="btn9 fl">发送验证码</a></span>
+                                </li>
+
+
+                                <li class="line">
+                                    <label>个人信息（选填项）</label>
+                                </li>
+                                <li>
+                                    <span class="note">真实姓名：</span>
+                                    <span class="bginput"><input type="text" id="realName" class="input_big s"placeholder="请输入您的真实姓名，至少2个字符"></span>
+                                    <span class="err"><i></i></span>
+                                </li>
+                                <li>
+                                    <span class="note">电子邮箱：</span>
+                                    <span class="bginput"><input type="text" id="email" class="input_big s" placeholder=" 格式如：xxx@qq.com，6-100个字符"></span>
+                                    <span class="err"><i></i></span>
+                                </li>
+
+
+                                <li class="license">
+                                    <label for="gouxuan" class="ckdiv">我同意
+                                        <input type="checkbox" id="gouxuan"/>
+                                    </label>
+                                    <a href="#">《药房网商城入驻用户服务协议》</a>
+                                </li>
+                                <li class="op" id="btnReg">
+                                    <a id="regbtn" class="btn2 b2" href="#">立即注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 尾部 -->
+        <div id="footer">
+
+                <div class="copyright">
+                    <div class="container">
+                        <p class="white">
+                            <a class="first" href="#">关于我们</a> | <a href="#">资质证书</a> | <a href="#">商家入驻</a> | <a href="#">联系我们</a> | <a href="#">广告联盟</a> | <a href="#">工作机会</a> | <a href="#">帮助中心</a> | <a href="#">法律声明</a> |  <a href="#">网站地图</a> | <a href="#">友情链接</a> |  <a href="#">在售商品</a> |  <a href="#">下架商品</a> |  <a href="#">商品索引</a> |  <a href="#">商品分类</a> |  <a href="#">热门搜索</a></p>
+                        
+                        <p class="zz clearfix"><span class="mr">互联网药品信息服务资格证编号：<a href="#">(沪)-经营性-2017-0003</a></span><span class="mr"><a href="#">ICP备案号：沪ICP备07012885号</a></span><span class="gaba"><img src="../img/gongan.png"><a href="#">沪公网安备 31011502002155号</a></span></p>
+                        <p class="copy">©2007-2018 药房网商城版权所有 上海伊邦医药信息科技有限公司</p>
+                        
+                        <p class="font">本网站用字经北京北大方正电子有限公司授权许可</p>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../css/detail.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_76q5i58am4s/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_kb6vgltwku/iconfont.css" />
+        <link rel="stylesheet" href="../lib/jquery-lxzoom/jquery.lxzoom.css">
+
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="../js/detail.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script src="../lib/jquery-lxzoom/jquery.lxzoom.js"></script>
+
+    </head>
+    <body>
+                <!-- 顶部top -->
+        <div id="top">
+            <div class="container">
+                <ul class="left fl">
+                    <li class="fl"><i class="iconfont icon-shoucang"></i><a href="#">收藏药房网商城</a><s></s></li>
+                    <li class="fl wxcj"><i class="iconfont icon-erweima"></i><a href="#">微信查价</a><s></s>
+                    <div class="wxbig">
+                        <div class="pic"></div>
+                        <div class="txt">微信扫描二维码，查药比价更方便！</div>
+                    </div></li>
+                    <li class="fl app"><i class="iconfont icon-shouji"></i><a href="#">手机APP</a><s></s>
+                    <div class="appbig"><div class="pic"></div><div class="txt">药房网商城App，注册就送20元</div></div>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li class='sjrz'>
+                        <a href="#">商家入驻</a>
+                    </li>
+                    <li class="wzdh">
+                        <a href="#">网站导航</a>
+                        <i class='iconfont icon-arrow-down'></i>
+                        <div class="other">
+                            <div class="item">
+                                <div class="h1">健康咨询</div>
+                                <a href="#">医药资讯</a>
+                                <a href="#">疾病知识</a>
+                                <a href="#">用药指导</a>
+                                <a href="#">健康问答</a>
+                                <a href="#">疾病症状库</a>
+                            </div>
+                            <div class="item">
+                                <div class="h1">特色服务</div>
+                                <a href="#">健康专题</a>
+                                <a href="#">健康百科</a>
+                                <a href="#">医院大全</a>
+                                <a href="#">药房联盟</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="kfzx">
+                        <a href="#">客服中心</a>
+                    </li>
+                    <li class="sc">
+                        <a href="#">收藏</a>
+                        <s></s>
+                    </li>
+                    <li class="person">
+                        <a href="#">个人中心</a>
+                        <i class='iconfont icon-arrow-down'></i>
+                        <s></s>
+                        <div class="menu_list">
+                            <a href="#">需求管理</a><a href="#">地址管理</a><a href="#">我的咨询</a><a href="#">我的问答</a><a href="#">最近浏览</a>  
+                        </div>
+                    </li>
+
+                    <!-- 购物车 -->
+
+                    <li class="cart">
+                        <i class='iconfont icon-gouwuche1'></i>
+                        <a href="#">需求单(<span style="color:rgb(204,0,0)">0</span>)</a>
+                        <div class="cart_box">您的购物车目前没有任何商品，建议您 <a class="green" href="#">[登录]</a> 查看</div>
+                    </li>
+
+                    <!-- 注册登录 -->
+
+                    <li class="dengluzhuce">
+                        <a href="html/login.html">登陆</a>
+                        /
+                        <a href="html/reg.html">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- header -->
+        <div id="header">
+            <div class="container">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="../img/logo.jpg" />
+                    </a>
+                </div>
+
+                <!-- 搜索框 -->
+
+                <div class="search">
+                    <form action="get" class="search_input">
+                        <ul class="opt_list">
+                            <li>商品<i class="iconfont icon-arrow-down"></i></li>
+                            <li>商家</li>
+                            <li>厂家</li>
+                            <li>医院</li>
+                        </ul>
+                        <input type="text"  placeholder="请输入批准文号、通用名、商品名、症状" class="txt"/>
+                        <button class="submit">搜索</button>
+                    </form>
+                    <ul class="hot_items">
+                        <li class="first">fds</li>
+                        <li class="active">dsfs</li>
+                        <li>dsfs</li>
+                        <li>dsf</li>
+                        <li>sds</li>
+                        <li>fs</li>
+                    </ul>
+                </div>
+
+                <!-- 正品承诺 -->
+                <div class="promise">
+                    <a href="#">
+                        <img src="../img/promise.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- 导航 -->
+
+        <div id="nav">
+            <div class="container">
+                <ul class="mainnav">
+                    <li class="first"><a href="#">全部商品分类</a></li>
+                    <li class="home"><a href="#">首页</a></li>
+                    <li><a href="#">药品超市</a></li>
+                    <li><a href="#">药房联盟</a></li>
+                    <li><a href="#">医院大全</a></li>
+                    <li><a href="#">医药资讯</a></li>
+                    <li><a href="#">健康问答</a></li>
+                </ul>
+
+                <div class="catlist">   
+
+                <!-- 二级导航 -->
+                    <ul class="erji">
+                        <li class="zxyp">
+                            <h2><a href="#">中西药品</a></h2>
+                            <div class="sub clearfix">
+                                <a href="#">肠胃用药</a>
+                                <a href="#">感冒药</a>
+                                <a href="#">心血管药</a>
+                            </div>
+                            <i class="iconfont icon-zhongxiyaopin"></i>
+                        </li>
+                        <li class="ylqx">
+                            <h2><a href="#">医疗器械</a></h2>
+                            <div class="sub clearfix">
+                                <a href="#">血压计</a>
+                                <a href="#">血糖仪</a>
+                                <a href="#">创可贴</a>
+                            </div>
+                            <i class="iconfont icon-yiliaoqixie"></i>
+                        </li>
+                        <li class="ysbj">
+                            <h2><a href="#">养生保健</a></h2>
+                            <div class="sub clearfix">
+                                <a href="#">滋补药酒</a>
+                                <a href="#">补钙</a>
+                                <a href="#">补气养血</a>
+                            </div>
+                            <i class="iconfont icon-icon_yangshengbaojian"></i>
+                        </li>
+                        <li class="jsyp">
+                            <h2><a href="#">计生用品</a></h2>
+                            <div class="sub clearfix">
+                                <a href="#">避孕套</a>
+                                <a href="#">避孕药</a>
+                                <a href="#">验孕检查</a>
+                            </div>
+                            <i class="iconfont icon-jishengyongpin"></i>
+                        </li>
+                        <li class="zyyp">
+                            <h2><a href="#">中药饮品</a></h2>
+                            <div class="sub clearfix">
+                                <a href="#">西洋参</a>
+                                <a href="#">三七</a>
+                                <a href="#">灵芝孢子粉</a>
+                            </div>
+                            <i class="iconfont icon-zhongyaodaijian"></i>
+                        </li>
+                        <li class="mrhf">
+                            <h2><a href="#">美容护肤</a></h2>
+                            <div class="sub clearfix">
+                                <a href="#">祛痘</a>
+                                <a href="#">祛斑</a>
+                                <a href="#">疤痕修复</a>
+                            </div>
+                            <i class="iconfont icon-meirong"></i>
+                        </li>
+                        
+                    </ul>
+
+                    <!-- 三级导航 -->
+
+                    <div class="sanji clearfix _first">
+                        <ul class="items">
+                            <li>
+                                <a href="#" class="one">肠胃用药<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">胃炎</a>
+                                <a href="#">胃溃疡</a>
+                                <a href="#">急性肠炎</a>
+                                <a href="#">十二指肠溃疡</a>
+                                <a href="#">胆膜炎</a>
+                                <a href="#">便秘</a>
+                                <a href="#">消化不良</a>
+                                <a href="#">痔疮</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">呼吸系统<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">支气管炎</a>
+                                <a href="#">肺热咳嗽</a>
+                                <a href="#">哮喘</a>
+                                <a href="#">气管炎</a>
+                                <a href="#">肺结核</a>
+
+                            </li>
+                            <li>
+                                <a href="#" class="one">心脑血管<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">高血压</a>
+                                <a href="#">糖尿病</a>
+                                <a href="#">冠心病</a>
+                                <a href="#">高血脂</a>
+                                <a href="#">心肌炎</a>
+                                <a href="#">脑血栓</a>
+                                <a href="#">中风偏瘫</a>
+                                <a href="#">低血压</a>
+                                <a href="#">静脉曲张</a>
+                                <a href="#">动脉硬化</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">风湿骨科<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">风湿病</a>
+                                <a href="#">关节炎</a>
+                                <a href="#">脊椎病</a>
+                                <a href="#">骨质疏松</a>
+                                <a href="#">通风</a>
+                                <a href="#">坐骨神经痛</a>
+                                <a href="#">腰肌劳损</a>
+                                <a href="#">肩周炎</a>
+                                <a href="#">眼椎间盘突出</a>
+                                <a href="#">骨质增生</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">抗肿瘤药<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">白血病</a>
+                                <a href="#">肺癌</a>
+                                <a href="#">胃癌</a>
+                                <a href="#">肝癌</a>
+                                <a href="#">肾癌</a>
+                                <a href="#">乳腺癌</a>
+                                <a href="#">卵巢癌</a>
+                                <a href="#">食道癌</a>
+                                <a href="#">鼻咽癌</a>
+                                <a href="#">胰腺癌</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">皮肤科药<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">皮炎</a>
+                                <a href="#">湿疹</a>
+                                <a href="#">痤疮</a>
+                                <a href="#">疥疮</a>
+                                <a href="#">疱疹</a>
+                                <a href="#">皮肤过敏</a>
+                                <a href="#">蚊虫叮咬</a>
+                                <a href="#">白癜风</a>
+                                <a href="#">尖锐湿疣</a>
+                                <a href="#">手足癣病</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">五官科药<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">眼科</a>
+                                <a href="#">鼻科</a>
+                                <a href="#">耳科</a>
+                                <a href="#">口腔科</a>
+                                <a href="#">喉科</a>
+                                
+                            </li>
+                            <li class="last">
+                                <a href="#">“查看更多”<label><s class="iconfont icon-you"></s></label></a>
+                            </li>
+                        </ul>
+                        <div class="right clearfix">
+                            <div class="top clearfix">
+                                <a href="#"><img src="../img/nav-mrhf-logo-4.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-zxyp-logo-2.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-zxyp-logo-3.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-zxyp-logo-4.png" alt="" /></a>
+                            </div>
+                            <div class="center">
+                                <a href="#"><img src="../img/506def1e-65c9-497a-9e65-f8aaab8fcdaa9794.jpg" alt="" /></a>
+                            </div>
+                            <div class="bottom">
+                                <h6>推荐商家</h6>
+                                <ul class="clearfix">
+                                    <li><a href="#">青岛海岸大药房海丰店</a></li>
+                                    <li><a href="#">上海富民大药房</a></li>
+                                    <li><a href="#">北京隆元康药房</a></li>
+                                    <li><a href="#">沧州迎宾大药房</a></li>
+                                    <li><a href="#">西充县同康大药房</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sanji clearfix _second">
+                        <ul class="items">
+                            <li>
+                                <a href="#" class="one">家庭常备<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">棉签</a>
+                                <a href="#">纱布</a>
+                                <a href="#">胶布</a>
+                                <a href="#">绷带</a>
+                                <a href="#">创可贴</a>
+                                <a href="#">消毒</a>
+                                
+                            </li>
+                            <li>
+                                <a href="#" class="one">检测设备<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">血压检测</a>
+                                <a href="#">血糖检测</a>
+                                <a href="#">体温检测</a>
+                                <a href="#">听诊器</a>
+                                <a href="#">体重脂肪测量仪</a>
+                                <a href="#">CFMS血小板聚焦检测试剂盒</a>
+                                <a href="#">免疫缺陷病毒抗体</a>
+                                <a href="#">标准对数视力表灯</a>
+
+                            </li>
+                            <li>
+                                <a href="#" class="one">助行器械<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">轮椅</a>
+                                <a href="#">拐杖</a>
+                                <a href="#">助行器</a>
+                                <a href="#">接尿器</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">康复理疗<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">红外理疗</a>
+                                <a href="#">按摩理疗</a>
+                                <a href="#">治疗仪器</a>
+                                <a href="#">足浴理疗</a>
+                                <a href="#">助听器</a>
+                                <a href="#">疝气治疗</a>
+                                <a href="#">矫姿</a>
+                                <a href="#">频谱理疗</a>
+                                <a href="#">磁场理疗</a>
+                                <a href="#">鼻腔护理</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">中医器械<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">制氧设备</a>
+                                <a href="#">供氧辅助器械</a>
+                                <a href="#">氧气袋</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">外用贴膏<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">降温退烧</a>
+                                <a href="#">风湿骨痛</a>
+                                <a href="#">妇科外用</a>
+                                <a href="#">五官外用</a>
+                                <a href="#">跌打损伤</a>
+                                <a href="#">晕车贴</a>
+                                <a href="#">医用敷料</a>
+     
+                            </li>
+                            <li>
+                                <a href="#" class="one">隐形眼睛<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">隐形眼镜</a>
+                                <a href="#">美瞳彩片</a>
+                                <a href="#">周边护理</a>
+                                
+                            </li>
+                            <li class="last">
+                                <a href="#">“查看更多”<label><s class="iconfont icon-you"></s></label></a>
+                            </li>
+                        </ul>
+                        <div class="right clearfix">
+                            <div class="top clearfix">
+                                <a href="#"><img src="../img/nav-ylqx-logo-1.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-ylqx-logo-2.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-ylqx-logo-3.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-ylqx-logo-4.png" alt="" /></a>
+                            </div>
+                            <div class="center">
+                                <a href="#"><img src="../img/e9a48e9e-bda6-4ac6-a380-e2565c1e05391984.jpg" alt="" /></a>
+                            </div>
+                            <div class="bottom">
+                                <h6>推荐商家</h6>
+                                <ul class="clearfix">
+                                    <li><a href="#">北京福瑞鸿达大药房</a></li>
+                                    <li><a href="#">舟山市普陀区巫师药房</a></li>
+                                    <li><a href="#">上海龙威大药房</a></li>
+                                    <li><a href="#">上海浦东雪莲大药房</a></li>
+                                    <li><a href="#">莆田市荔城区六顺堂药店</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sanji clearfix _third">
+                        <ul class="items">
+                            <li>
+                                <a href="#" class="one">大众养生<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">滋补药酒</a>
+                                <a href="#">增强免疫</a>
+                                <a href="#">补矿物质</a>
+                                <a href="#">补维生素</a>
+                                <a href="#">改善睡眠</a>
+                                <a href="#">调节肠胃</a>
+                                <a href="#">缓解疲劳</a>
+                                <a href="#">清咽润喉</a>
+                                <a href="#">保护视力</a>
+                                
+                                
+                            </li>
+                            <li>
+                                <a href="#" class="one">男性保健<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">补肾壮阳</a>
+                                <a href="#">养肝护肝</a>
+                                <a href="#">补充体力</a>
+                                
+
+                            </li>
+                            <li>
+                                <a href="#" class="one">女性保健<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">美容养颜</a>
+                                <a href="#">减肥瘦身</a>
+                                <a href="#">调节分泌</a>
+                                <a href="#">补气养血</a>
+                                <a href="#">丰胸美体</a>
+                                <a href="#">产前产后</a>
+
+
+                            </li>
+                            <li>
+                                <a href="#" class="one">中老年保健<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">调节血脂</a>
+                                <a href="#">调节血压</a>
+                                <a href="#">调节血糖</a>
+                                <a href="#">增强免疫</a>
+                                <a href="#">骨质疏松</a>
+                                <a href="#">润肠通便</a>
+                                <a href="#">强身健体</a>
+                                <a href="#">抑制肿瘤</a>
+                                <a href="#">改善睡眠</a>
+                                <a href="#">心脏养护</a>
+                            </li>
+                            <li>
+                                <a href="#" class="one">青少年儿童<label><s class="iconfont icon-you"></s></label></a>
+                                <a href="#">增强免疫</a>
+                                <a href="#">补钙排铅</a>
+                                <a href="#">发育增高</a>
+                                <a href="#">补维生素</a>
+                                <a href="#">调节肠胃</a>
+                                <a href="#">调节肠胃</a>
+
+                            </li>
+                            
+                            <li class="last">
+                                <a href="#">“查看更多”<label><s class="iconfont icon-you"></s></label></a>
+                            </li>
+                        </ul>
+                        <div class="right clearfix">
+                            <div class="top clearfix">
+                                <a href="#"><img src="../img/nav-ysbj-logo-1.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-ysbj-logo-2.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-ysbj-logo-3.png" alt="" /></a>
+                                <a href="#"><img src="../img/nav-ysbj-logo-4.png" alt="" /></a>
+                            </div>
+                            <div class="center">
+                                <a href="#"><img src="../img/7b5f2159-0b03-48a5-8de4-da1ae4f125dd4663.jpg" alt="" /></a>
+                            </div>
+                            <div class="bottom">
+                                <h6>推荐商家</h6>
+                                <ul class="clearfix">
+                                    <li><a href="#">云南长兴医药保健有限公司</a></li>
+                                    <li><a href="#">温州市这阵大药房</a></li>
+                                    <li><a href="#">合肥金百年大药房</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanji clearfix"></div>
+                    <div class="sanji clearfix"></div>
+                    <div class="sanji clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="wrap">
+            <div class="container">
+                <div class="guid">
+                    <a href="http://localhost:1111/src/#">药房网商城</a><i class="iconfont icon-you"></i>
+                    <a href="#">中西药品</a><i class="iconfont icon-you"></i>
+                    <a href="#">家庭常用</a><i class="iconfont icon-you"></i>
+                    <a href="#">便秘</a><i class="iconfont icon-you"></i>
+                    <strong>中大 一清颗粒价格</strong>
+                </div>
+                <div class="main clearfix">
+                    <!-- left -->
+                    <div class="left">
+                        <div class="big">
+                            <div class="goods">
+                                <!-- <img src="../img/goods/lvyansuanmeipian.jpg" data-big="../img/goods/lvyansuanmeipian.jpg" class="picTop"/> -->
+                                <span class="tip">温馨提醒：商品包装因厂家更换频繁，如有不符请以实物为准。</span>
+                            </div>
+                            <div class="piccontainer">
+                                <div class="pic-list clearfix">
+                                    <div class="p first"><img src="" /></div>
+                                    <div class="p"><img src="" /></div>
+
+                                    <div class="p"><img src="" /></div>
+
+                                    <div class="p"><img src="" /></div>
+
+                                    <div class="p"><img src="" /></div>
+                                    <div class="p"><img src="" /></div>
+                                    <div class="p"><img src="" /></div>
+                                    <div class="p"><img src="" /></div>
+                                </div>
+                                <div class="btnPre">&lt;</div>
+                                <div class="btnNex">&gt;</div>
+                            </div>
+                            <div class="share clearfix">
+                                <div class="ids">商品编号：<span class="idname"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right -->
+                    <div class="right">
+                        <h1 class="clearfix goodname">中大 一清颗粒 - 京通美联</h1>
+                        <div class="appad">
+                            <a href="#" class="i2">下载App领20元优惠券</a>
+                        </div>
+                        <div class="info">
+                            <dl class="clearfix">
+                                <dt class="l">通&nbsp;&nbsp;用&nbsp;&nbsp;名</dt>
+                                <dd class="w2 l"><strong>一清颗粒</strong></dd>
+                                <dt class="l">商品名/品牌</dt>
+                                <dd class="w3 l">中大<span class="z" id="pz">[注]</span><div class="tip" id="amore2"></div></dd>
+                                <dt class="l">包装规格</dt>
+                                <dd class="w2 l" id="tip">7.5gx6袋/盒</dd>
+                                <dt class="l">剂型/型号</dt>
+                                <dd class="w3 l">颗粒剂</dd>
+                                
+                            </dl>
+                            <dl class="price clearfix">
+                                <dt>零售价格</dt>
+                                <dd>
+                                    <span class="money fl">¥<label class="num" id ="sale">12.00</label></span>
+                                </dd>
+                                
+                            </dl>
+
+
+                            <dl class="h2"><dt>需求数量</dt><dd class="w1"><span class="qty"><button id="reduce">-</button><input type="text" class="num" value="1" id="quantity"><button id="add">+</button></span></dd></dl>
+
+                            <div class="mainop clearfix fl">
+                                <button class="btnBuy">立即购买</button>
+                                <button class="btnAdd">加入购物车</button>
+                            </div>
+
+                            <div class="sinfo clearfix">
+                                <p class="hui">该报价由：广东康爱多连锁药店有限公司 发布，商家承诺：</p>
+                                <div class="spec clearfix">
+                                     
+                                    <span><i class="icons fahuo2"></i><label style="color:#008800;">24小时发货</label></span>
+                                    
+                                    <span><i class="icons zheng2"></i>正品保障</span>
+                                    <span><i class="icons piao2"></i>提供发票</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+                <div class="navigation">
+                    <div class="container clearfix">
+                        <dl>
+                            <dt>消费者保障</dt>
+                            <dd>
+                                <a href="#">网购警示</a>
+                                <a href="#">隐私保护</a>
+                                <a href="#">投诉维权</a>
+                                <a href="#">客服中心</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>新手帮助</dt>
+                            <dd>
+                                <a href="#">用户注册</a>
+                                <a href="#">商品搜索</a>
+                                <a href="#">微信查药</a>
+                                <a href="#">订单状态</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>配送方式</dt>
+                            <dd>
+                                <a href="#">物流配送</a>
+                                <a href="#">运费说明</a>
+                                <a href="#">门店送货</a>
+                                <a href="#">验收标准</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>支付方式</dt>
+                            <dd>
+                                <a href="#">支付宝</a>
+                                <a href="#">货到付款</a>
+                                <a href="#">银联支付</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>售后服务</dt>
+                            <dd>
+                                <a href="#">退换货保障</a>
+                                <a href="#">发票制度</a>
+                                <a href="#">退款说明</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>商家合作</dt>
+                            <dd>
+                                <a href="#">商家入驻</a>
+                                <a href="#">厂家入驻</a>
+                            </dd>
+                        </dl>
+                        
+                        <dl class="mr20">
+                            <dt class="txt-center">手机APP</dt>
+                            <dd class="txt-center">
+                                <a href="#" class="qr txt-center">
+                                    <img src="../img/erweima.png">
+                                </a>
+                                新人领20元礼包
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt class="txt-center">关注微信</dt>
+                            <dd class="txt-center">
+                                <a href="#" class="qr txt-center">
+                                    <img src="../img/weixin.png">
+                                </a>
+                                每日签到领积分
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <div class="container">
+                        <p class="white">
+                            <a class="first" href="#">关于我们</a> | <a href="#">资质证书</a> | <a href="#">商家入驻</a> | <a href="#">联系我们</a> | <a href="#">广告联盟</a> | <a href="#">工作机会</a> | <a href="#">帮助中心</a> | <a href="#">法律声明</a> |  <a href="#">网站地图</a> | <a href="#">友情链接</a> |  <a href="#">在售商品</a> |  <a href="#">下架商品</a> |  <a href="#">商品索引</a> |  <a href="#">商品分类</a> |  <a href="#">热门搜索</a></p>
+                        <p class="white"><a class="first" href="#">药房联盟</a> |  <a href="#">医院大全</a> |  <a href="#">热门资讯</a> |  <a href="#">产品目录</a> |  <a href="#">品牌大全</a> |  <a href="#">疾病用药</a> |  <a href="#">症状用药</a> |  <a href="#">药品库</a></p>
+                        <p class="zz clearfix"><span class="mr">互联网药品信息服务资格证编号：<a href="#">(沪)-经营性-2017-0003</a></span><span class="mr"><a href="#">ICP备案号：沪ICP备07012885号</a></span><span class="gaba"><img src="../img/gongan.png"><a href="#">沪公网安备 31011502002155号</a></span><span class="mr">（沪）网械平台备字[2018]第00001号</span><span class="mr">增值电信业务经营许可证编号：<a href="#">沪B2-20170392</a></span></p>
+                        <p class="copy">©2007-2018 药房网商城版权所有 上海伊邦医药信息科技有限公司</p>
+                        <div class="cert clearfix">
+                            <span class="icon gs"><a href="#"><img src="../img/1.jpg" /></a></span>
+                            <span class="icon bj"><img src="../img/2.jpg" /></span>
+                            <span class="icon ba"><img src="../img/3.jpg" /></span>
+                            <span class="icon ls"><img src="../img/4.jpg" /></span>
+                            <span class="icon zx"><img src="../img/5.jpg" /></span>
+                            <span class="icon cx"><a href="#"><img src="../img/6.jpg" /></a></span>
+                            <span class="icon al"><a href="#"><img src="../img/7.jpg" /></a></span>
+                            <span class="icon sw"><a href="#"><img src="../img/8.jpg" /></a></span>
+                            <span class="icon rd"><a href="#"><img src="../img/9.jpg" /></a></span>
+                        </div>
+                        <p class="font">本网站用字经北京北大方正电子有限公司授权许可</p>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>

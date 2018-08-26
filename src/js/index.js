@@ -2,11 +2,57 @@
 * @Author: Marte
 * @Date:   2018-08-20 14:04:12
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-23 11:54:33
+* @Last Modified time: 2018-08-25 19:01:39
 */
 
+//头部
+jQuery(function($){
+    $('.wxcj').hover(function(){
+        $('.wxbig').css('display','block');
+    },function(){
+        $('.wxbig').css('display','none');
+    })
+    $('.app').hover(function(){
+        $('.appbig').css('display','block');
+    },function(){
+        $('.appbig').css('display','none');
+    })
+    $('.cart').hover(function(){
+        $('.cart_box').css('display','block');
+    },function(){
+        $('.cart_box').css('display','none');
+    })
+    $('.person').hover(function(){
+        $('.menu_list').css('display','block');
+    },function(){
+        $('.menu_list').css('display','none');
+    })
+    $('.wzdh').hover(function(){
+        $('.other').css('display','block');
+    },function(){
+        $('.other').css('display','none');
+    })
+})
+
+//搜索框
+jQuery(function($){
+    $('.opt_list').hover(function(){
+        $('.opt_list').children('li').css('display','block');
+    },function(){
+        $('.opt_list').children('li').css('display','none');
+        $('.opt_list').children('li:first').css('display','block');
+    })
+
+    $('.opt_list').children('li').click(function(){
+        $('.opt_list').children('li').css('display','none');console.log($(this))
+        $('.opt_list li:first-child').text($(this).html())
+    })
+})
+
+
+
 //导航
-//
+
 jQuery(function($){
     $('.erji .zxyp').on('mouseover',function(){
         $('._first').css('display','block');
@@ -47,8 +93,8 @@ jQuery(function($){
 
 
 })
-addEventListener('DOMContentLoaded',()=>{
     //轮播图
+document.addEventListener('DOMContentLoaded',()=>{
      
     var Carousel = function(options){
         // 属性
@@ -161,9 +207,9 @@ addEventListener('DOMContentLoaded',()=>{
         // 页面进入自动轮播
         this.timer = setInterval(this.autoPlay.bind(this),opt.duration);
         this.play();
-console.log(ele)
+
         // 鼠标移入移出
-        ele.onmouseover = ()=>{console.log(666)
+        ele.onmouseover = ()=>{
             this.stop();
         }
         ele.onmouseout = ()=>{
@@ -219,8 +265,6 @@ console.log(ele)
             for(var i=0;i<this.len;i++){
                 animate(this.ul.children[i],{opacity:0});
                 this.ul.children[i].style.display='none';
-
-
             }
                 this.ul.children[0].style.background='rgb(157, 227, 252)';
                 this.ul.children[1].style.background='rgb(83, 126, 237)';
@@ -229,11 +273,14 @@ console.log(ele)
                 this.ul.children[4].style.background='rgb(255, 78, 90)';
             this.ul.children[opt.index].style.display='block';
             animate(this.ul.children[opt.index],{opacity:1});
-            
-            
-            
 
-
+        }else if(opt.type === 'fade1'){
+            for(var i=0;i<this.len;i++){
+                animate(this.ul.children[i],{opacity:0});
+                this.ul.children[i].style.display='none';
+            }
+            this.ul.children[opt.index].style.display='block';
+            animate(this.ul.children[opt.index],{opacity:1});
         }
 
         
@@ -266,12 +313,67 @@ console.log(ele)
         imgs:["img/banner1.jpg","img/banner2.jpg","img/banner3.jpg","img/banner4.jpg","img/banner5.jpg"]
      });
 
+     //1F
+     new Carousel({
+        ele:'.banner1',
+        index:1,
+        page:false,
+        button:false,
+        type:'fade1',
+        imgs:["img/1F-1.jpg","img/1F-2.jpg"]
+     });
+     // 2F
+     new Carousel({
+        ele:'.banner2',
+        index:1,
+        page:false,
+        button:false,
+        type:'fade1',
+        imgs:["img/F2-1.jpg","img/F2-2.jpg"]
+     });
+     // 3F
+     new Carousel({
+        ele:'.banner3',
+        index:1,
+        page:false,
+        button:false,
+        type:'fade1',
+        imgs:["img/F3-1.jpg","img/F3-2.jpg"]
+     });
+     // 4F
+     new Carousel({
+        ele:'.banner4',
+        index:1,
+        page:false,
+        button:false,
+        type:'fade1',
+        imgs:["img/F4-1.jpg","img/F4-2.jpg"]
+     });
+     // 5F
+     new Carousel({
+        ele:'.banner5',
+        index:1,
+        page:false,
+        button:false,
+        type:'fade1',
+        imgs:["img/F5-1.jpg","img/F5-2.jpg"]
+     });
+     // 6F
+     new Carousel({
+        ele:'.banner6',
+        index:1,
+        page:false,
+        button:false,
+        type:'fade1',
+        imgs:["img/F6-1.jpg","img/F6-2.jpg"]
+     });
+})
 
 
         
 
-
-    //抢购
+    //抢购 数据库生成结构
+document.addEventListener('DOMContentLoaded',()=>{
     
     let status = [200,304];
     
@@ -305,13 +407,15 @@ console.log(ele)
     }
     xhr.open('get','api/qianggou.php',true);
     xhr.send();
+})
 
 
 
-    //content部分
-    
+//content部分 F1-F6 数据库生成结构
+document.addEventListener('DOMContentLoaded',()=>{
+
     let content = document.querySelectorAll('.content .right');
-   
+    let status = [200,304];
 
     //中西药品--家庭常用
     
@@ -327,7 +431,7 @@ console.log(ele)
             let ul = document.createElement('ul');
             ul.className = '_jiating good vis';
             ul.innerHTML = res1.map(function (item,idx){
-                return `<li>
+                return `<li data-id="${res1[idx].id}">
                 <a href="#"><img src="${res1[idx].imgurl}"/></a>
                 <a href="#" class="txt">${res1[idx].name}</a>
                 <p class="ps">${res1[idx].tip}</p>
@@ -1127,222 +1231,223 @@ console.log(ele)
 
 
 
-    // tab标签切换
+// F1-F6 tab标签切换
 
-    jQuery(function($){
+jQuery(function($){
 
-        //1F
-        
-        $('.snav .jiating').hover(function(){
-            $('.zx').children('a').removeClass('active');
-            $('.good').removeClass('vis');
-            $('._jiating').addClass('vis');
-            $('.jiating').addClass('active');
-
-        })
-        $('.snav .weichang').hover(function(){
-            $('.zx').children('a').removeClass('active');
-            $('.good').removeClass('vis');
-            $('._weichang').addClass('vis');
-            $('.weichang').addClass('active');
-            // $('.jiating ::before').addClass('active');
-        })
-        $('.snav .xinnao').hover(function(){
-            $('.zx').children('a').removeClass('active');
-
-            $('.good').removeClass('vis');
-            $('._xinnao').addClass('vis');
-            $('.xinnao').addClass('active');
-        })
-        $('.snav .wuguan').hover(function(){
-            $('.zx').children('a').removeClass('active');
-
-            $('.good').removeClass('vis');
-            $('._wuguan').addClass('vis');
-            $('.wuguan').addClass('active');
-        })
-        $('.snav .pifu').hover(function(){
-            $('.zx').children('a').removeClass('active');
-
-            $('.good').removeClass('vis');
-            $('._pifu').addClass('vis');
-            $('.pifu').addClass('active');
-        })
-        $('.snav .huxi').hover(function(){
-            $('.zx').children('a').removeClass('active');
-
-            $('.good').removeClass('vis');
-            $('._huxi').addClass('vis');
-            $('.huxi').addClass('active');
-        })
-        $('.snav .shenjing').hover(function(){
-            $('.zx').children('a').removeClass('active');
-
-            $('.good').removeClass('vis');
-            $('._shenjing').addClass('vis');
-            $('.shenjing').addClass('active');
-        })
-
-
-        // 2F
-            
-        $('.snav .qsn').hover(function(){
-            $('.ys').children('a').removeClass('active');
-
-            $('.good_ys').removeClass('vis');
-            $('._qsn').addClass('vis');
-            $('.qsn').addClass('active');
-        })
-        $('.snav .zln').hover(function(){
-            $('.ys').children('a').removeClass('active');
-
-            $('.good_ys').removeClass('vis');
-            $('._zln').addClass('vis');
-            $('.zln').addClass('active');
-        })
-        $('.snav .nv').hover(function(){
-            $('.ys').children('a').removeClass('active');
-
-            $('.good_ys').removeClass('vis');
-            $('._nv').addClass('vis');
-            $('.nv').addClass('active');
-        })
-        $('.snav .nan').hover(function(){
-            $('.ys').children('a').removeClass('active');
-
-            $('.good_ys').removeClass('vis');
-            $('._nan').addClass('vis');
-            $('.nan').addClass('active');
-        })
-        $('.snav .dz').hover(function(){
-            $('.ys').children('a').removeClass('active');
-
-            $('.good_ys').removeClass('vis');
-            $('._dz').addClass('vis');
-            $('.dz').addClass('active');
-        })
-
-        //3F
-        $('.snav .cb').hover(function(){
-            $('.qx').children('a').removeClass('active');
-
-            $('.good_qx').removeClass('vis');
-            $('._cb').addClass('vis');
-            $('.cb').addClass('active');
-        })
-        $('.snav .jc').hover(function(){
-            $('.qx').children('a').removeClass('active');
-
-            $('.good_qx').removeClass('vis');
-            $('._jc').addClass('vis');
-            $('.jc').addClass('active');
-        })
-        $('.snav .kf').hover(function(){
-            $('.qx').children('a').removeClass('active');
-
-            $('.good_qx').removeClass('vis');
-            $('._kf').addClass('vis');
-            $('.kf').addClass('active');
-        })
-        $('.snav .yl').hover(function(){
-            $('.qx').children('a').removeClass('active');
-
-            $('.good_qx').removeClass('vis');
-            $('._yl').addClass('vis');
-            $('.yl').addClass('active');
-        })
-        $('.snav .tg').hover(function(){
-            $('.qx').children('a').removeClass('active');
-
-            $('.good_qx').removeClass('vis');
-            $('._tg').addClass('vis');
-            $('.tg').addClass('active');
-        })
-
-        // 4F
-        $('.snav .by').hover(function(){
-            $('.js').children('a').removeClass('active');
-
-            $('.good_js').removeClass('vis');
-            $('._by').addClass('vis');
-            $('.by').addClass('active');
-        })
-        $('.snav .jcyp').hover(function(){
-            $('.js').children('a').removeClass('active');
-            $('.good_js').removeClass('vis');
-            $('._jcyp').addClass('vis');
-            $('.jcyp').addClass('active');
-        })
-
-
-        // 5F
-        $('.snav .mg').hover(function(){
-            $('.yp').children('a').removeClass('active');
-            $('.good_yp').removeClass('vis');
-            $('._mg').addClass('vis');
-            $('.mg').addClass('active');
-        })
-        $('.snav .zyc').hover(function(){
-            $('.yp').children('a').removeClass('active');
-            $('.good_yp').removeClass('vis');
-            $('._zyc').addClass('vis');
-            $('.zyc').addClass('active');
-        })
-        $('.snav .fm').hover(function(){
-            $('.yp').children('a').removeClass('active');
-            $('.good_yp').removeClass('vis');
-            $('._fm').addClass('vis');
-            $('.fm').addClass('active');
-        })
-        $('.snav .cha').hover(function(){
-            $('.yp').children('a').removeClass('active');
-            $('.good_yp').removeClass('vis');
-            $('._cha').addClass('vis');
-            $('.cha').addClass('active');
-        })
-
-
-        // 6F
-        $('.snav .yz').hover(function(){
-            $('.mr').children('a').removeClass('active');
-            $('.good_mr').removeClass('vis');
-            $('._yz').addClass('vis');
-            $('.yz').addClass('active');
-        })
-        $('.snav .cz').hover(function(){
-            $('.mr').children('a').removeClass('active');
-            $('.good_mr').removeClass('vis');
-            $('._cz').addClass('vis');
-            $('.cz').addClass('active');
-        })
-        $('.snav .hl').hover(function(){
-            $('.mr').children('a').removeClass('active');
-            $('.good_mr').removeClass('vis');
-            $('._hl').addClass('vis');
-            $('.hl').addClass('active');
-        })
-
-
-
-
-        // 图片hover效果
-        $('.content .right img*').hover(function(){
-            $(this).css('transform','translateX(-8px)');
-        },function(){
-            $(this).css('transform','translateX(8px)');
-
-        })
-        
+    //1F
+    
+    $('.snav .jiating').hover(function(){
+        $('.zx').children('a').removeClass('active');
+        $('.good').removeClass('vis');
+        $('._jiating').addClass('vis');
+        $('.jiating').addClass('active');
 
     })
+    $('.snav .weichang').hover(function(){
+        $('.zx').children('a').removeClass('active');
+        $('.good').removeClass('vis');
+        $('._weichang').addClass('vis');
+        $('.weichang').addClass('active');
+        // $('.jiating ::before').addClass('active');
+    })
+    $('.snav .xinnao').hover(function(){
+        $('.zx').children('a').removeClass('active');
+
+        $('.good').removeClass('vis');
+        $('._xinnao').addClass('vis');
+        $('.xinnao').addClass('active');
+    })
+    $('.snav .wuguan').hover(function(){
+        $('.zx').children('a').removeClass('active');
+
+        $('.good').removeClass('vis');
+        $('._wuguan').addClass('vis');
+        $('.wuguan').addClass('active');
+    })
+    $('.snav .pifu').hover(function(){
+        $('.zx').children('a').removeClass('active');
+
+        $('.good').removeClass('vis');
+        $('._pifu').addClass('vis');
+        $('.pifu').addClass('active');
+    })
+    $('.snav .huxi').hover(function(){
+        $('.zx').children('a').removeClass('active');
+
+        $('.good').removeClass('vis');
+        $('._huxi').addClass('vis');
+        $('.huxi').addClass('active');
+    })
+    $('.snav .shenjing').hover(function(){
+        $('.zx').children('a').removeClass('active');
+
+        $('.good').removeClass('vis');
+        $('._shenjing').addClass('vis');
+        $('.shenjing').addClass('active');
+    })
+
+
+    // 2F
+        
+    $('.snav .qsn').hover(function(){
+        $('.ys').children('a').removeClass('active');
+
+        $('.good_ys').removeClass('vis');
+        $('._qsn').addClass('vis');
+        $('.qsn').addClass('active');
+    })
+    $('.snav .zln').hover(function(){
+        $('.ys').children('a').removeClass('active');
+
+        $('.good_ys').removeClass('vis');
+        $('._zln').addClass('vis');
+        $('.zln').addClass('active');
+    })
+    $('.snav .nv').hover(function(){
+        $('.ys').children('a').removeClass('active');
+
+        $('.good_ys').removeClass('vis');
+        $('._nv').addClass('vis');
+        $('.nv').addClass('active');
+    })
+    $('.snav .nan').hover(function(){
+        $('.ys').children('a').removeClass('active');
+
+        $('.good_ys').removeClass('vis');
+        $('._nan').addClass('vis');
+        $('.nan').addClass('active');
+    })
+    $('.snav .dz').hover(function(){
+        $('.ys').children('a').removeClass('active');
+
+        $('.good_ys').removeClass('vis');
+        $('._dz').addClass('vis');
+        $('.dz').addClass('active');
+    })
+
+    //3F
+    $('.snav .cb').hover(function(){
+        $('.qx').children('a').removeClass('active');
+
+        $('.good_qx').removeClass('vis');
+        $('._cb').addClass('vis');
+        $('.cb').addClass('active');
+    })
+    $('.snav .jc').hover(function(){
+        $('.qx').children('a').removeClass('active');
+
+        $('.good_qx').removeClass('vis');
+        $('._jc').addClass('vis');
+        $('.jc').addClass('active');
+    })
+    $('.snav .kf').hover(function(){
+        $('.qx').children('a').removeClass('active');
+
+        $('.good_qx').removeClass('vis');
+        $('._kf').addClass('vis');
+        $('.kf').addClass('active');
+    })
+    $('.snav .yl').hover(function(){
+        $('.qx').children('a').removeClass('active');
+
+        $('.good_qx').removeClass('vis');
+        $('._yl').addClass('vis');
+        $('.yl').addClass('active');
+    })
+    $('.snav .tg').hover(function(){
+        $('.qx').children('a').removeClass('active');
+
+        $('.good_qx').removeClass('vis');
+        $('._tg').addClass('vis');
+        $('.tg').addClass('active');
+    })
+
+    // 4F
+    $('.snav .by').hover(function(){
+        $('.js').children('a').removeClass('active');
+
+        $('.good_js').removeClass('vis');
+        $('._by').addClass('vis');
+        $('.by').addClass('active');
+    })
+    $('.snav .jcyp').hover(function(){
+        $('.js').children('a').removeClass('active');
+        $('.good_js').removeClass('vis');
+        $('._jcyp').addClass('vis');
+        $('.jcyp').addClass('active');
+    })
+
+
+    // 5F
+    $('.snav .mg').hover(function(){
+        $('.yp').children('a').removeClass('active');
+        $('.good_yp').removeClass('vis');
+        $('._mg').addClass('vis');
+        $('.mg').addClass('active');
+    })
+    $('.snav .zyc').hover(function(){
+        $('.yp').children('a').removeClass('active');
+        $('.good_yp').removeClass('vis');
+        $('._zyc').addClass('vis');
+        $('.zyc').addClass('active');
+    })
+    $('.snav .fm').hover(function(){
+        $('.yp').children('a').removeClass('active');
+        $('.good_yp').removeClass('vis');
+        $('._fm').addClass('vis');
+        $('.fm').addClass('active');
+    })
+    $('.snav .cha').hover(function(){
+        $('.yp').children('a').removeClass('active');
+        $('.good_yp').removeClass('vis');
+        $('._cha').addClass('vis');
+        $('.cha').addClass('active');
+    })
+
+
+    // 6F
+    $('.snav .yz').hover(function(){
+        $('.mr').children('a').removeClass('active');
+        $('.good_mr').removeClass('vis');
+        $('._yz').addClass('vis');
+        $('.yz').addClass('active');
+    })
+    $('.snav .cz').hover(function(){
+        $('.mr').children('a').removeClass('active');
+        $('.good_mr').removeClass('vis');
+        $('._cz').addClass('vis');
+        $('.cz').addClass('active');
+    })
+    $('.snav .hl').hover(function(){
+        $('.mr').children('a').removeClass('active');
+        $('.good_mr').removeClass('vis');
+        $('._hl').addClass('vis');
+        $('.hl').addClass('active');
+    })
+
+
+
+
+    // 图片hover效果
+    $('.content .right img*').hover(function(){
+        $(this).css('transform','translateX(-8px)');
+    },function(){
+        $(this).css('transform','translateX(8px)');
+
+    })
+    
+
+})
 
 // 抢购
 
 jQuery(function($){
     $('.cont .right img*').hover(function(){
-        $(this).css('transform','scale(1.2)');
+       
+        $(this).animate({width:'190px',height:'120%'},300);
     },function(){
-        $(this).css('transform','scale(1)');
+        $(this).animate({width:'171px',height:'100%'},300);
     })
 })
 
@@ -1369,3 +1474,10 @@ jQuery(function($){
 })
 
 
+// 跳转到详情页
+jQuery(function($){
+    $('.content>.right').on('click','a',function(){
+        let id = $(this).parent().attr('data-id');console.log(id)
+        window.location.href='http://localhost:1111/src/html/detail.html?'+'id='+id;
+    })
+})

@@ -17,8 +17,14 @@
             <div class="container">
                 <ul class="left fl">
                     <li class="fl"><i class="iconfont icon-shoucang"></i><a href="#">收藏药房网商城</a><s></s></li>
-                    <li class="fl"><i class="iconfont icon-erweima"></i><a href="#">微信查价</a><s></s></li>
-                    <li class="fl"><i class="iconfont icon-shouji"></i><a href="#">手机APP</a><s></s></li>
+                    <li class="fl wxcj"><i class="iconfont icon-erweima"></i><a href="#">微信查价</a><s></s>
+                    <div class="wxbig">
+                        <div class="pic"></div>
+                        <div class="txt">微信扫描二维码，查药比价更方便！</div>
+                    </div></li>
+                    <li class="fl app"><i class="iconfont icon-shouji"></i><a href="#">手机APP</a><s></s>
+                    <div class="appbig"><div class="pic"></div><div class="txt">药房网商城App，注册就送20元</div></div>
+                    </li>
                 </ul>
                 <ul class="right">
                     <li class='sjrz'>
@@ -27,6 +33,23 @@
                     <li class="wzdh">
                         <a href="#">网站导航</a>
                         <i class='iconfont icon-arrow-down'></i>
+                        <div class="other">
+                            <div class="item">
+                                <div class="h1">健康咨询</div>
+                                <a href="#">医药资讯</a>
+                                <a href="#">疾病知识</a>
+                                <a href="#">用药指导</a>
+                                <a href="#">健康问答</a>
+                                <a href="#">疾病症状库</a>
+                            </div>
+                            <div class="item">
+                                <div class="h1">特色服务</div>
+                                <a href="#">健康专题</a>
+                                <a href="#">健康百科</a>
+                                <a href="#">医院大全</a>
+                                <a href="#">药房联盟</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="kfzx">
                         <a href="#">客服中心</a>
@@ -39,6 +62,9 @@
                         <a href="#">个人中心</a>
                         <i class='iconfont icon-arrow-down'></i>
                         <s></s>
+                        <div class="menu_list">
+                            <a href="#">需求管理</a><a href="#">地址管理</a><a href="#">我的咨询</a><a href="#">我的问答</a><a href="#">最近浏览</a>  
+                        </div>
                     </li>
 
                     <!-- 购物车 -->
@@ -46,14 +72,15 @@
                     <li class="cart">
                         <i class='iconfont icon-gouwuche1'></i>
                         <a href="#">需求单(<span style="color:rgb(204,0,0)">0</span>)</a>
+                        <div class="cart_box">您的购物车目前没有任何商品，建议您 <a class="green" href="#">[登录]</a> 查看</div>
                     </li>
 
                     <!-- 注册登录 -->
 
                     <li class="dengluzhuce">
-                        <a href="#">登陆</a>
+                        <a href="html/login.html">登陆</a>
                         /
-                        <a href="#">免费注册</a>
+                        <a href="html/reg.html">免费注册</a>
                     </li>
                 </ul>
             </div>
@@ -75,9 +102,9 @@
                     <form action="get" class="search_input">
                         <ul class="opt_list">
                             <li>商品<i class="iconfont icon-arrow-down"></i></li>
-                            <li>商家<i class="iconfont icon-arrow-down"></i></li>
-                            <li>厂家<i class="iconfont icon-arrow-down"></i></li>
-                            <li>医院<i class="iconfont icon-arrow-down"></i></li>
+                            <li>商家</li>
+                            <li>厂家</li>
+                            <li>医院</li>
                         </ul>
                         <input type="text"  placeholder="请输入批准文号、通用名、商品名、症状" class="txt"/>
                         <button class="submit">搜索</button>
@@ -493,7 +520,7 @@
             
 
             <!-- 主体 -->
-         <div id="main">
+        <div id="main">
             <div class="container">
 
                 <!-- 限时抢购 -->
@@ -549,10 +576,7 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <div class="banner1"></div>
                             <div class="pp clearfix">
                                 <a href="#" class="bl"><img src="img/nav-zxyp-logo-1.png" alt="" /></a>
                                 <a href="#"><img src="img/nav-zxyp-logo-2.png" alt="" /></a>
@@ -588,10 +612,7 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <div class="banner2"></div>
                             <div class="pp clearfix">
                                 <a href="#" class="bl"><img src="img/nav-ysbj-logo-1.png" alt="" /></a>
                                 <a href="#"><img src="img/nav-ysbj-logo-2.png" alt="" /></a>
@@ -627,10 +648,7 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <div class="banner3"></div>
                             <div class="pp clearfix">
                                 <a href="#" class="bl"><img src="img/31.png" alt="" /></a>
                                 <a href="#"><img src="img/32.png" alt="" /></a>
@@ -641,16 +659,6 @@
                             </div>
                         </div>
                         <div class="right">
-                            <!-- <ul>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                                <li><a href="#"><img src="img/conmon.jpg" alt="" /></a><a href="#" class="txt">清痘水</a><p class="ps">100ml/瓶</p><p class="￥82.00"></p></li>
-                            </ul> -->
                         </div>
                     </div>
                 </div>
@@ -672,10 +680,7 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <div class="banner4"></div>
                             <div class="pp clearfix">
                                 <a href="#" class="bl"><img src="img/41.png" alt="" /></a>
                                 <a href="#"><img src="img/42.png" alt="" /></a>
@@ -710,10 +715,7 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <div class="banner5"></div>
                             <div class="pp clearfix">
                                 <a href="#" class="bl"><img src="img/51.png" alt="" /></a>
                                 <a href="#"><img src="img/52.png" alt="" /></a>
@@ -747,10 +749,7 @@
                     </div>
                     <div class="content clearfix">
                         <div class="left">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                            <div class="banner6"></div>
                             <div class="pp clearfix">
                                 <a href="#" class="bl"><img src="img/61.png" alt="" /></a>
                                 <a href="#"><img src="img/62.png" alt="" /></a>
@@ -766,6 +765,8 @@
                     </div>
 
                 </div>
+
+                <!-- more -->
                 <div class="more">
                     <div class="title">
                         <div class="txt">还没看够</div>
@@ -1162,6 +1163,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- news -->
         <div id="news" class="clearfix">
             <div class="container">
                 <div class="left">
@@ -1228,13 +1231,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- links -->
         <div id="links">
             <div class="container">
                 
                 <div class="links">
                     <div class="lnav">
                         <ul class="hnav">
-                            <li class="_remen">热门商品</li>
+                            <li class="_remen hover">热门商品</li>
                             <li class="_youqing">友情链接</li>
                         </ul>
                     </div>
