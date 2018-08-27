@@ -12,7 +12,7 @@
 
 
     // 查找数据库中是否存在同名用户
-    $sql = "select * from reg-data where name='$username'";
+    $sql = "select * from regData where username='$username'";
 
     // 执行sql语句
     $result = $conn->query($sql);

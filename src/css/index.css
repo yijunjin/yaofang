@@ -86,7 +86,31 @@ body { background: #fff; color: #333; font-size: 12px; font-family: Arial,"å®‹ä½
 
 #top .container .right .cart .cart_box { position: absolute; top: 40px; left: -1px; z-index: 9999; display: none; overflow: hidden; padding: 15px; width: 325px; border: 1px solid #ccc; border-top: 0; background: #fff; text-align: left; line-height: 25px; }
 
-#top .container .right .cart .cart_box a { color: #0cb95f; }
+#top .container .right .cart .cart_box > a { color: #0cb95f; }
+
+#top .container .right .cart .cart_box .cartlist dl { clear: both; overflow: hidden; margin-right: 5px; padding: 8px 0; max-height: 62px; border-bottom: 1px dashed #f0f0f0; line-height: 20px; }
+
+#top .container .right .cart .cart_box .cartlist dl dt { float: left; clear: both; width: 240px; text-align: left; line-height: 23px; }
+
+#top .container .right .cart .cart_box .cartlist dl dt img { float: left; margin: 0 12px 0 0; width: 50px; height: 50px; border: 1px solid #eee; }
+
+#top .container .right .cart .cart_box .cartlist dl dt a { display: block; }
+
+#top .container .right .cart .cart_box .cartlist dl dt a:hover { color: #0cb95f; text-decoration: underline; }
+
+#top .container .right .cart .cart_box .cartlist dl dd { float: right; padding-top: 5px; height: 40px; color: #999; text-align: right; }
+
+#top .container .right .cart .cart_box .cartlist dl dd s { color: #e50000; }
+
+#top .container .right .cart .cart_box .cartlist dl dd .money { color: #e50000; font-style: normal; font-family: Arial; }
+
+#top .container .right .cart .cart_box .carttotal { margin: 10px 0; height: 30px; text-align: right; line-height: 30px; }
+
+#top .container .right .cart .cart_box .carttotal .money { font-family: "\534E\6587\7EC6\9ED1",Arial; color: #e50000; font-style: normal; font-size: 18px; }
+
+#top .container .right .cart .cart_box .cartsubmit { margin: 8px 0; height: 24px; float: right; }
+
+#top .container .right .cart .cart_box .cartsubmit a.btn { display: block; background: #e50000; color: #fff; text-align: center; padding: 0 11px; width: 48px; height: 24px; line-height: 24px; }
 
 #top .container .right .cart:hover { background-color: #FFF; width: 108px; border-bottom: 1px solid #fff; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #fff; }
 

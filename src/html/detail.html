@@ -74,16 +74,27 @@
 
                     <li class="cart">
                         <i class='iconfont icon-gouwuche1'></i>
-                        <a href="#">需求单(<span style="color:rgb(204,0,0)">0</span>)</a>
-                        <div class="cart_box">您的购物车目前没有任何商品，建议您 <a class="green" href="#">[登录]</a> 查看</div>
+                        <a href="cart.html">需求单(<span style="color:rgb(204,0,0)" class="qtyTop"></span>)</a>
+                        <div class="cart_box">
+                                最新加入的商品
+                            <div class="cartlist">
+                                
+                            </div>
+                            <div class="carttotal">
+                                全额总计：<span class="money"></span>
+                            </div>
+                            <div class="cartsubmit">
+                                <a href="html/cart.html" class="btn">提交需求</a>
+                            </div>
+                        </div>
                     </li>
 
                     <!-- 注册登录 -->
 
                     <li class="dengluzhuce">
-                        <a href="html/login.html">登陆</a>
+                        <a href="login.html">登陆</a>
                         /
-                        <a href="html/reg.html">免费注册</a>
+                        <a href="reg.html">免费注册</a>
                     </li>
                 </ul>
             </div>
@@ -94,7 +105,7 @@
             <div class="container">
                 <!-- logo -->
                 <div class="logo">
-                    <a href="#">
+                    <a href="../index.html">
                         <img src="../img/logo.jpg" />
                     </a>
                 </div>
@@ -527,17 +538,6 @@
                             </div>
                             <div class="piccontainer">
                                 <div class="pic-list clearfix">
-                                    <div class="p first"><img src="" /></div>
-                                    <div class="p"><img src="" /></div>
-
-                                    <div class="p"><img src="" /></div>
-
-                                    <div class="p"><img src="" /></div>
-
-                                    <div class="p"><img src="" /></div>
-                                    <div class="p"><img src="" /></div>
-                                    <div class="p"><img src="" /></div>
-                                    <div class="p"><img src="" /></div>
                                 </div>
                                 <div class="btnPre">&lt;</div>
                                 <div class="btnNex">&gt;</div>
@@ -596,6 +596,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="webox">
+            <h2>操作提示<span>×</span></h2>
+            <div class="boxcontent">
+                商品已成功加入您的需求清单
+            </div>
+            <div class="opdiv">
+                <a href="cart.html" class='btnl'>查看需求单</a>
+                <a href="#" class="btnr">继续浏览</a>
             </div>
         </div>
 

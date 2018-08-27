@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-20 14:04:12
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-25 19:01:39
+* @Last Modified time: 2018-08-27 19:14:30
 */
 
 //头部
@@ -33,6 +33,59 @@ jQuery(function($){
         $('.other').css('display','none');
     })
 })
+
+
+// top购物车
+document.addEventListener('DOMContentLoaded',()=>{
+    /*
+        购物车页
+        * 读取cookie -> 显示到页面
+     */
+    
+    var cart_box = document.querySelector('.cart_box');
+    var goodslist = Cookie.get('goodslist');//'[{}]',''
+    console.log(goodslist);
+    if(goodslist.length<=0){
+        goodslist = [];
+        cart_box.innerHTML = '您的购物车目前没有任何商品，建议您 <a href="html/login.html">[登录]</a> 查看';
+    }else{
+        goodslist = JSON.parse(goodslist);
+    }
+
+    render();
+
+    function render(){
+
+        // 根据数据生成html结构
+
+
+        cart_box.children[0].innerHTML = goodslist.map(function (goods,idx){
+            return `<dl data-id="${goodslist[idx].id}">
+                        <dt>                             
+                            <img src="${goodslist[idx].imgurl}" />
+                            <a href="#">${goodslist[idx].name}</a>
+                        </dt>
+                        <dd><span class="money">￥${goodslist[idx].price}</span> × ${goodslist[idx].qty}</dd>
+                    </dl>`
+
+        }).join('\n');
+        var money = document.querySelector('.carttotal>.money');
+        var resAll = 0;
+        var qtyAll = 0;
+        for(var n=0;n<goodslist.length;n++){
+            resAll+=goodslist[n].price*goodslist[n].qty;
+            qtyAll += goodslist[n].qty*1;
+        }
+        money.innerHTML = '￥'+resAll;
+        var qtyTop = document.querySelector('.qtyTop');
+        qtyTop.innerHTML = qtyAll;
+
+    }
+        
+
+})
+
+
 
 //搜索框
 jQuery(function($){
@@ -1478,6 +1531,6 @@ jQuery(function($){
 jQuery(function($){
     $('.content>.right').on('click','a',function(){
         let id = $(this).parent().attr('data-id');console.log(id)
-        window.location.href='http://localhost:1111/src/html/detail.html?'+'id='+id;
+        window.location.href='html/detail.html?'+'id='+id;
     })
 })

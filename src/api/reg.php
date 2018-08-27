@@ -15,7 +15,7 @@
 
 
     // 查找数据库中是否存在同名用户
-    $sql = "insert into username(name,password) values('$username','$password')";
+    $sql = "insert into regData(username,password) values('$username','$password')";
 
     // 执行sql语句
     $result = $conn->query($sql);

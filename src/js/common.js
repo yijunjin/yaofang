@@ -221,6 +221,7 @@ var Cookie = {
 
 		// 保存路径
 		if(prop.path){
+			console.log(prop.path);
 			str +=';path=' + prop.path
 		}
 

@@ -274,6 +274,13 @@ div{height:auto;}
             font-size: 14px;
             font-family: "\5FAE\8F6F\96C5\9ED1";
             line-height: 40px;
+            position:relative;
+            s{
+                position:absolute;
+                left:510px;
+                top:10px;
+                display:none;
+            }
             .note{
                 float: left;
                 display: block;
@@ -302,7 +309,7 @@ div{height:auto;}
                 padding: 0 10px 0 25px;
                 font-size: 12px;
                 font-family: Arial,"宋体";
-                display:none;
+                display:inline;
             }
             .bginput{
                 float: left;

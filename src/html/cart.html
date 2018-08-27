@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_76q5i58am4s/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_kb6vgltwku/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../iconfont/font_7e7j7cv4gf/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../css/cart.css" />
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/cart.js"></script>
+
+    </head>
+    <body>
+                <!-- 顶部top -->
+        <div id="top">
+            <div class="container">
+                <ul class="left fl">
+                    <li class="fl"><i class="iconfont icon-shoucang"></i><a href="#">收藏药房网商城</a><s></s></li>
+                    <li class="fl wxcj"><i class="iconfont icon-erweima"></i><a href="#">微信查价</a><s></s>
+                    <div class="wxbig">
+                        <div class="pic"></div>
+                        <div class="txt">微信扫描二维码，查药比价更方便！</div>
+                    </div></li>
+                    <li class="fl app"><i class="iconfont icon-shouji"></i><a href="#">手机APP</a><s></s>
+                    <div class="appbig"><div class="pic"></div><div class="txt">药房网商城App，注册就送20元</div></div>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li class='sjrz'>
+                        <a href="#">商家入驻</a>
+                    </li>
+                    <li class="wzdh">
+                        <a href="#">网站导航</a>
+                        <i class='iconfont icon-arrow-down'></i>
+                        <div class="other">
+                            <div class="item">
+                                <div class="h1">健康咨询</div>
+                                <a href="#">医药资讯</a>
+                                <a href="#">疾病知识</a>
+                                <a href="#">用药指导</a>
+                                <a href="#">健康问答</a>
+                                <a href="#">疾病症状库</a>
+                            </div>
+                            <div class="item">
+                                <div class="h1">特色服务</div>
+                                <a href="#">健康专题</a>
+                                <a href="#">健康百科</a>
+                                <a href="#">医院大全</a>
+                                <a href="#">药房联盟</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="kfzx">
+                        <a href="#">客服中心</a>
+                    </li>
+                    <li class="sc">
+                        <a href="#">收藏</a>
+                        <s></s>
+                    </li>
+                    <li class="person">
+                        <a href="#">个人中心</a>
+                        <i class='iconfont icon-arrow-down'></i>
+                        <s></s>
+                        <div class="menu_list">
+                            <a href="#">需求管理</a><a href="#">地址管理</a><a href="#">我的咨询</a><a href="#">我的问答</a><a href="#">最近浏览</a>  
+                        </div>
+                    </li>
+
+                    <!-- 购物车 -->
+
+                    <li class="cart">
+                        <i class='iconfont icon-gouwuche1'></i>
+                        <a href="html/cart.html">需求单(<span style="color:rgb(204,0,0)" class="qtyTop"></span>)</a>
+                        <div class="cart_box">
+                                最新加入的商品
+                            <div class="cartlist">
+                                
+                            </div>
+                            <div class="carttotal">
+                                全额总计：<span class="money"></span>
+                            </div>
+                            <div class="cartsubmit">
+                                <a href="html/cart.html" class="btn">提交需求</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 注册登录 -->
+
+                    <li class="dengluzhuce">
+                        <a href="login.html">登陆</a>
+                        /
+                        <a href="reg.html">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- header -->
+        <div id="header">
+            <div class="container">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.jpg" />
+                    </a>
+                </div>
+                <div class="sub"><span class="sub_name">需求清单</span></div>
+
+            </div>
+        </div>
+
+        <div id="wrap">
+            <div class="tabnav clearfix">
+                <ul class="navul">
+                    <li><a class="cur" href="#">商品列表</a></li>
+                </ul>
+            </div>
+            <table class="table01">
+                <tbody>
+                    <tr>
+                        <td class="w1">
+                            <div class="ck" id="checkAll"><input type="checkbox" /></div>
+                        </td>
+                        <td class="w2"><span id="checkAlltxt">全选</span></td>
+                        <td class="w3">商品信息</td>
+                        <td class="w4">单价（元）</td>
+                        <td class="w5">数量</td>
+                        <td class="w6">小计（元）</td>
+                        <td class="w7">操作</td>
+                        </tr> 
+                </tbody>
+            </table>
+
+            <table class="table02">
+                <tbody>
+                </tbody>
+            </table>
+
+            <table class="table03">
+                <tbody>
+                    <tr>
+                        <td class="w1"><a class="nonexta" href="../index.html">&lt;&lt;我再逛逛</a></td>
+                        <td class="w2">商品金额总计（不含运费及包装费）<span class="money fsize22">¥<span class="num" id="ordertotal"></span></span></td>
+                        <td class="w3"><a class="btn" href="#">去结算</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <div id="footer">
+                <div class="navigation">
+                    <div class="container clearfix">
+                        <dl>
+                            <dt>消费者保障</dt>
+                            <dd>
+                                <a href="#">网购警示</a>
+                                <a href="#">隐私保护</a>
+                                <a href="#">投诉维权</a>
+                                <a href="#">客服中心</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>新手帮助</dt>
+                            <dd>
+                                <a href="#">用户注册</a>
+                                <a href="#">商品搜索</a>
+                                <a href="#">微信查药</a>
+                                <a href="#">订单状态</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>配送方式</dt>
+                            <dd>
+                                <a href="#">物流配送</a>
+                                <a href="#">运费说明</a>
+                                <a href="#">门店送货</a>
+                                <a href="#">验收标准</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>支付方式</dt>
+                            <dd>
+                                <a href="#">支付宝</a>
+                                <a href="#">货到付款</a>
+                                <a href="#">银联支付</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>售后服务</dt>
+                            <dd>
+                                <a href="#">退换货保障</a>
+                                <a href="#">发票制度</a>
+                                <a href="#">退款说明</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>商家合作</dt>
+                            <dd>
+                                <a href="#">商家入驻</a>
+                                <a href="#">厂家入驻</a>
+                            </dd>
+                        </dl>
+                        
+                        <dl class="mr20">
+                            <dt class="txt-center">手机APP</dt>
+                            <dd class="txt-center">
+                                <a href="#" class="qr txt-center">
+                                    <img src="../img/erweima.png">
+                                </a>
+                                新人领20元礼包
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt class="txt-center">关注微信</dt>
+                            <dd class="txt-center">
+                                <a href="#" class="qr txt-center">
+                                    <img src="../img/weixin.png">
+                                </a>
+                                每日签到领积分
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <div class="container">
+                        <p class="white">
+                            <a class="first" href="#">关于我们</a> | <a href="#">资质证书</a> | <a href="#">商家入驻</a> | <a href="#">联系我们</a> | <a href="#">广告联盟</a> | <a href="#">工作机会</a> | <a href="#">帮助中心</a> | <a href="#">法律声明</a> |  <a href="#">网站地图</a> | <a href="#">友情链接</a> |  <a href="#">在售商品</a> |  <a href="#">下架商品</a> |  <a href="#">商品索引</a> |  <a href="#">商品分类</a> |  <a href="#">热门搜索</a></p>
+                        <p class="white"><a class="first" href="#">药房联盟</a> |  <a href="#">医院大全</a> |  <a href="#">热门资讯</a> |  <a href="#">产品目录</a> |  <a href="#">品牌大全</a> |  <a href="#">疾病用药</a> |  <a href="#">症状用药</a> |  <a href="#">药品库</a></p>
+                        <p class="zz clearfix"><span class="mr">互联网药品信息服务资格证编号：<a href="#">(沪)-经营性-2017-0003</a></span><span class="mr"><a href="#">ICP备案号：沪ICP备07012885号</a></span><span class="gaba"><img src="../img/gongan.png"><a href="#">沪公网安备 31011502002155号</a></span><span class="mr">（沪）网械平台备字[2018]第00001号</span><span class="mr">增值电信业务经营许可证编号：<a href="#">沪B2-20170392</a></span></p>
+                        <p class="copy">©2007-2018 药房网商城版权所有 上海伊邦医药信息科技有限公司</p>
+                        <div class="cert clearfix">
+                            <span class="icon gs"><a href="#"><img src="../img/1.jpg" /></a></span>
+                            <span class="icon bj"><img src="../img/2.jpg" /></span>
+                            <span class="icon ba"><img src="../img/3.jpg" /></span>
+                            <span class="icon ls"><img src="../img/4.jpg" /></span>
+                            <span class="icon zx"><img src="../img/5.jpg" /></span>
+                            <span class="icon cx"><a href="#"><img src="../img/6.jpg" /></a></span>
+                            <span class="icon al"><a href="#"><img src="../img/7.jpg" /></a></span>
+                            <span class="icon sw"><a href="#"><img src="../img/8.jpg" /></a></span>
+                            <span class="icon rd"><a href="#"><img src="../img/9.jpg" /></a></span>
+                        </div>
+                        <p class="font">本网站用字经北京北大方正电子有限公司授权许可</p>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
